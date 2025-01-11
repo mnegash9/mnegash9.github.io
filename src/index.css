@@ -71,6 +71,8 @@ body {
   justify-content: center;
   align-items: center;
   --visibility: 1;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
 /* Create intersection observer targets */
@@ -83,6 +85,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.image-wrapper:hover {
+  transform: scale(1.02);
 }
 .sticky-image {
   position: sticky;
@@ -115,6 +120,13 @@ body {
   background-color: orange;
   color: white;
 }
+.projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 125px;
+}
+
 a {
   font-weight: 500;
   color: #1e1e26;
