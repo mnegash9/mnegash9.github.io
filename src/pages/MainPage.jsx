@@ -1,8 +1,8 @@
 import { React, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
-import TheBuzz from "../assets/thebuzz-project-demo.jpg";
-import PowerApps from "../assets/powerapps-project-demo.jpg";
-import PowerBI from "../assets/powerbi-project-demo.jpg";
+import TheBuzz from "../assets/thebuzz-project-demo.svg";
+import PowerApps from "../assets/powerapps-project-demo.svg";
+import PowerBI from "../assets/powerbi-project-demo.svg";
 import { ChevronDoubleDownIcon } from "@heroicons/react/16/solid";
 import ScrollToTopButton from "../components/ScrollToTopButton.jsx";
 
