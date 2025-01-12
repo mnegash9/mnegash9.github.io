@@ -1,39 +1,56 @@
 import React from "react";
+import { useParams, Link } from 'react-router-dom';
+import Footer from '../components/Footer'
+import ProfilePic from "../assets/profile2.jpeg"
 
 export default function About() {
   return (
-    <section id="about">
-      <div >
-        <div >
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-            Hi, I'm Matyas.
-            <br className="hidden lg:inline-block" />I love to build amazing
-            apps.
-          </h1>
-          <p className="mb-8 leading-relaxed">
-            I'm a current senior studying Computer Engineering at Lehigh University
-          </p>
-          <div className="flex justify-center">
-            <a
-              href="#contact"
-              className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
-              Work With Me
-            </a>
-            <a
-              href="#projects"
-              className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
-              See My Past Work
-            </a>
+    <>
+      <section id="about">
+        <header className="header">
+          <div className="myicon">
+            <nav>
+              <Link to="/"><p>matyas.</p></Link>
+            </nav>
           </div>
-        </div>
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-          <img
-            className="object-cover object-center rounded"
-            alt="hero"
-            src="./coding.svg"
-          />
-        </div>
-      </div>
-    </section>
+        </header>
+        <main>
+          <div style={{ display: "flex", marginTop: "120px", height:'600px' }}>
+            <div style={{ marginLeft: "12px", flex: 1 }}>
+              <div style={{ width: "600px" }}>
+                <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+                  Hi, I'm Matyas.
+                  <br className="hidden lg:inline-block" />I like to build things.
+                </h1>
+                <p>
+                  I'm a first-generation immigrant from Eritrea, and came to the US at the age of 10, which was a formative experience.
+                </p>
+                <p className="">
+                  I love building things (software + hardware). Some of my past projects include making a
+                  homemade e-bike, working on cars, and replacing the bearing of an LG washer (boo planned obsolescence).
+                </p>
+                <p>
+                  Currently, I'm a senior Computer Engineering student at Lehigh University. I'm working with a partner on <Link target="_blank" to="https://terracore-website.onrender.com/">Terracore</Link>,
+                  a soil sensing project using the Particle IoT ecosystem.
+                </p>
+
+              </div>
+            </div>
+            <div style={{ flex: 1 }}>
+              <div style={{ display:'flex'}}>
+                <img
+                  className="avatar"
+                  alt="profile"
+                  src={ProfilePic}
+                  
+                />
+              </div>
+            </div>
+          </div>
+        </main>
+        <Footer />
+      </section>
+    </>
+
   );
 }

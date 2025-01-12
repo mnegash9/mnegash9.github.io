@@ -1,10 +1,11 @@
-import { React, useEffect } from "react";
+import { React, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
 import TheBuzz from "../assets/thebuzz-project-demo.svg";
 import PowerApps from "../assets/powerapps-project-demo.svg";
 import PowerBI from "../assets/powerbi-project-demo.svg";
 import { ChevronDoubleDownIcon } from "@heroicons/react/16/solid";
 import ScrollToTopButton from "../components/ScrollToTopButton.jsx";
+import Footer from "../components/Footer.jsx";
 
 const projectData = [
   {
@@ -12,14 +13,6 @@ const projectData = [
     image: TheBuzz,
     path: '/projects/thebuzz',
     title: 'The Buzz Project'
-  },
-  {
-    id: 'powerbi',
-    image: PowerBI,
-  },
-  {
-    id: 'powerapps',
-    image: PowerApps,
   }
 ];
 
@@ -54,59 +47,71 @@ export default function MainPage() {
     navigate(path);
   };
 
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div id="mainpage">
-      <header className="header">
-        <div className="myicon">
-          <nav>
-            <Link to="/"><p>matyas.</p></Link>
-          </nav>
+    <section>
+      <div id="mainpage" style={{ height: "100vh", width: "100%", display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: "center" }}>
+        <header className="header">
+          <div className="myicon">
+            <nav>
+              <Link to="/"><p>matyas.</p></Link>
+            </nav>
+          </div>
+          <div className="mynavbar">
+            <nav>
+              <Link to="/about"><p>about</p></Link>
+              {/* <Link to="/trips"><p>trips+hobbies</p></Link> */}
+            </nav>
+          </div>
+        </header>
+        <section className="mytitle">
+          <div>
+            <h1>Matyas</h1>
+            <hr />
+          </div>
+        </section>
+        <div className="lead-down">
+          <ChevronDoubleDownIcon height={75} width={75} />
+          <small>past work</small>
         </div>
-        <div className="mynavbar">
-          <nav>
-            <Link to="/about"><p>about</p></Link>
-            <Link to="/trips"><p>trips+hobbies</p></Link>
-          </nav>
-        </div>
-      </header>
-      <section className="mytitle">
-        <div>
-          <h1>Matyas</h1>
-          <hr />
-        </div>
-      </section>
-      <div className="lead-down">
-        <ChevronDoubleDownIcon height={75} width={75} />
-        <small>past work</small>
-      </div>
-      <div style={{ height: "200vh" }}>
         <div className="project-images">
           {projectData.map((project) => (
             <div
               className="image-wrapper"
               key={project.id}
-              onClick={() => handleImageClick(project.path)}
-              role="button"
               tabIndex={0}
               onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
+                if (e.key === 'Enter') {
                   handleImageClick(project.path);
                 }
-              }}
-            >
+              }}>
               <img
+                role="button"
+                onClick={() => handleImageClick(project.path)}
                 src={project.image}
                 alt={project.title}
                 className="sticky-image"
-                style={{position:"sticky", top: 0, maxWidth:'65%', height: "auto"}}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                style={{
+                  cursor: "pointer",
+                  transform: isHovered ? 'scale(1.02)' : 'scale(1)', transition: 'transform 0.3s ease'
+                }}
               />
             </div>
           ))}
+          <div className="image-wrapper" >
+            <img src={PowerBI} alt={'Power BI Demo Image'} className="sticky-image" />
+          </div>
+          <div className="image-wrapper" >
+            <img src={PowerApps} alt={'Power Apps Demo Image'} className="sticky-image" />
+          </div>
         </div>
+        <Footer />
+        <ScrollToTopButton />
       </div>
-      <footer className="footer">Designed by me(Matyas Negash).</footer>
-      <ScrollToTopButton />
-    </div>
+    </section>
   );
 }
 

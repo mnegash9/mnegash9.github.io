@@ -10,7 +10,7 @@ const ScrollToTopButton = () => {
 
   // Function to toggle visibility based on scroll position
   const toggleVisibility = () => {
-    if (window.scrollY > 1024) {
+    if (window.scrollY > 800) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
