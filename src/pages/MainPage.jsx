@@ -82,8 +82,8 @@ export default function MainPage() {
       <div style={{ height: "200vh" }}>
         <div className="project-images">
           {projectData.map((project) => (
-            <div 
-              className="image-wrapper" 
+            <div
+              className="image-wrapper"
               key={project.id}
               onClick={() => handleImageClick(project.path)}
               role="button"
@@ -94,15 +94,17 @@ export default function MainPage() {
                 }
               }}
             >
-              <img 
-                src={project.image} 
+              <img
+                src={project.image}
                 alt={project.title}
                 className="sticky-image"
+                style={{position:"sticky", top: 0, maxWidth:'65%', height: "auto"}}
               />
             </div>
           ))}
         </div>
       </div>
+      <footer className="footer">Designed by me(Matyas Negash).</footer>
       <ScrollToTopButton />
     </div>
   );

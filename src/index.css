@@ -59,7 +59,7 @@ body {
   position: sticky;
   flex-direction: column; /* Stack images vertically */
   align-items: center;
-  gap: 50px; /* Add spacing between images */
+  gap: 100px; /* Add spacing between images */
 
 }
 /* Base visibility for all images */
@@ -89,13 +89,9 @@ body {
 .image-wrapper:hover {
   transform: scale(1.02);
 }
-.sticky-image {
-  position: sticky;
-  top: 0;
-  max-width: 65%;
-  height: auto;
+.sticky-image { 
   border: 5px solid black;
-  border-radius: 20px;
+  border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   opacity: var(--visibility);
   transition: opacity 0.2s ease-in-out;
@@ -120,13 +116,14 @@ body {
   background-color: orange;
   color: white;
 }
-.projects {
+.footer {
+  position: relative;
+  bottom: 100%;
+  height: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 125px;
 }
-
 a {
   font-weight: 500;
   color: #1e1e26;
