@@ -70,7 +70,7 @@ const ProjectPage = () => {
                                 <h2>Give it a try here </h2>
                                 <p>The Buzz is an idea sharing app for private internal discussion (like in a company) and allows posting of ideas, comments, and files/images.</p>
                                 <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center", alignItems: "center" }}>
-                                    <Link target="_blank" to='https://matyas.homelinuxserver.org'>
+                                    <Link target="_blank" to='https://thebuzz.homelinuxserver.org'>
                                         <div style={{ backgroundColor: "#222831", cursor: "pointer" }}>
                                             <p style={{ color: "white", fontSize: 30, padding: "20px 30px" }}>
                                                 <u>The Buzz</u>

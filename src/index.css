@@ -103,7 +103,7 @@
   justify-content: center;
   text-align: center;
   width: 100%;
-  background-color: #393E46;
+  background-color: #222831;
   color: white;
   position: relative;
 }
@@ -111,8 +111,8 @@
   object-fit: cover;
   object-position: top center;
   border-radius:50%;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   border: 2px solid black
 
 }
@@ -141,7 +141,7 @@ html, body {
 
 body {
   margin: 0;
-  min-width: 600px;
+  min-width: 100px;
   min-height: 100vh;
 }
 

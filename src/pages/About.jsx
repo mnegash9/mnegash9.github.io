@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, Link } from 'react-router-dom';
 import Footer from '../components/Footer'
 import ProfilePic from "../assets/profile2.jpeg"
+import LinkedInButton from "../components/LinkedInButton";
 
 export default function About() {
   return (
@@ -37,14 +38,14 @@ export default function About() {
               </div>
             </div>
             <div style={{ flex: 1 }}>
-              <div style={{ display:'flex'}}>
+              <div style={{ display:'flex', flexDirection:'column'}}>
                 <img
                   className="avatar"
                   alt="profile"
-                  src={ProfilePic}
-                  
+                  src={ProfilePic} 
                 />
               </div>
+              
             </div>
           </div>
         </main>
