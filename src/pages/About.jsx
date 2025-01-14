@@ -16,16 +16,13 @@ export default function About() {
           </div>
         </header>
         <main>
-          <div className='about' style={{ display: "flex", marginTop: "120px", height:'auto', overflowY:'auto' }}>
+          <div className='about' style={{ display: "flex", marginTop: "120px", overflowY:'auto' }}>
             <div style={{ marginLeft: "12px", flex: 1 }}>
               <div className='about-description' style={{  }}>
                 <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
                   Hi, I'm Matyas.
                   <br className="hidden lg:inline-block" />I like to build things.
                 </h1>
-                <p>
-                  I'm a first-generation immigrant from Eritrea, and came to the US at the age of 10, which was a formative experience.
-                </p>
                 <p className="">
                   I love building things (software + hardware). Some of my past projects include making a
                   homemade e-bike, working on cars, and replacing the bearing of an LG washer (boo planned obsolescence).

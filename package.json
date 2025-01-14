@@ -6,6 +6,7 @@
   "homepage": "https://mnegash9.github.io",
   "scripts": {
     "dev": "vite",
+    "start": "BROWSER=polypane",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "build": "vite build",
