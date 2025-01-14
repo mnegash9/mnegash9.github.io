@@ -1,8 +1,8 @@
 import { React, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
-import TheBuzz from "../assets/thebuzz-project-demo.svg";
-import PowerApps from "../assets/powerapps-project-demo.svg";
-import PowerBI from "../assets/powerbi-project-demo.svg";
+import TheBuzz from "../assets/thebuzz-project-demo.png";
+import PowerApps from "../assets/powerapps-project-demo.png";
+import PowerBI from "../assets/powerbi-project-demo.png";
 import { ChevronDoubleDownIcon } from "@heroicons/react/16/solid";
 import ScrollToTopButton from "../components/ScrollToTopButton.jsx";
 import Footer from "../components/Footer.jsx";
@@ -86,19 +86,19 @@ export default function MainPage() {
                   handleImageClick(project.path);
                 }
               }}>
-              <img
-                role="button"
-                onClick={() => handleImageClick(project.path)}
-                src={project.image}
-                alt={project.title}
-                className="sticky-image"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-                style={{
-                  cursor: "pointer",
-                  transform: isHovered ? 'scale(1.02)' : 'scale(1)', transition: 'transform 0.3s ease'
-                }}
-              />
+                <img
+                  role="button"
+                  onClick={() => handleImageClick(project.path)}
+                  src={project.image}
+                  alt={project.title}
+                  className="sticky-image svg"
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  style={{
+                    cursor: "pointer",
+                    transform: isHovered ? 'scale(1.02)' : 'scale(1)', transition: 'transform 0.3s ease'
+                  }}
+                />
             </div>
           ))}
           <div className="image-wrapper" >

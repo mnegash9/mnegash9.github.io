@@ -7,7 +7,7 @@ import LinkedInButton from "../components/LinkedInButton";
 export default function About() {
   return (
     <>
-      <section id="about">
+      <section id="about-page">
         <header className="header">
           <div className="myicon">
             <nav>
@@ -16,9 +16,9 @@ export default function About() {
           </div>
         </header>
         <main>
-          <div style={{ display: "flex", marginTop: "120px", height:'600px' }}>
+          <div className='about' style={{ display: "flex", marginTop: "120px", height:'auto', overflowY:'auto' }}>
             <div style={{ marginLeft: "12px", flex: 1 }}>
-              <div style={{ width: "600px" }}>
+              <div className='about-description' style={{  }}>
                 <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
                   Hi, I'm Matyas.
                   <br className="hidden lg:inline-block" />I like to build things.
@@ -31,14 +31,14 @@ export default function About() {
                   homemade e-bike, working on cars, and replacing the bearing of an LG washer (boo planned obsolescence).
                 </p>
                 <p>
-                  Currently, I'm a senior Computer Engineering student at Lehigh University. I'm working with a partner on <Link target="_blank" to="https://terracore-website.onrender.com/">Terracore</Link>,
+                  Currently, I'm a senior Computer Engineering student at Lehigh University. I'm working with a partner on <Link target="_blank" to="https://terracore-website.onrender.com/"><u>Terracore</u></Link>,
                   a soil sensing project using the Particle IoT ecosystem.
                 </p>
 
               </div>
             </div>
             <div style={{ flex: 1 }}>
-              <div style={{ display:'flex', flexDirection:'column'}}>
+              <div style={{ justifyContent:'center', alignContent:'center'}}>
                 <img
                   className="avatar"
                   alt="profile"
@@ -48,6 +48,7 @@ export default function About() {
               
             </div>
           </div>
+          
         </main>
         <Footer />
       </section>

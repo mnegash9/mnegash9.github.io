@@ -23,7 +23,7 @@ const ProjectPage = () => {
 
     return (
         <>
-            <section>
+            <section >
                 <header className="header">
                     <div className="myicon">
                         <nav>
@@ -32,13 +32,13 @@ const ProjectPage = () => {
                     </div>
                 </header>
                 <main >
-                    <div style={{ display: 'flex', overflow:"auto" }}>
+                    <div className='thebuzz' style={{ display: 'flex', overflow:"auto" }}>
                         <div style={{ flex: 1, marginLeft: '12px', marginTop: 300 }}>
                             <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
                             <em>Share text, files, or images, <br></br> collaborate internally, and <br></br>vote on ideas</em>
                         </div>
 
-                        <div className="projects" style={{ flex: 2, height: "300px", width: "500px", marginTop: "120px", marginLeft: "0px" }}>
+                        <div className="projects" style={{ flex: 2, marginTop: "120px", marginLeft: "0px" }}>
                             <div style={{ marginLeft: 30 }}>
                                 <p className="text-gray-700">Culmination of a semester long project. Initially privately hosted at Lehigh, it now lives in a Dokku container in an Amazon EC2 instance.</p>
                                 <p>To the right is the system component diagram.</p>
