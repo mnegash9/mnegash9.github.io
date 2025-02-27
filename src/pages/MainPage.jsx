@@ -6,6 +6,7 @@ import PowerBI from "../assets/powerbi-project-demo.png";
 import { ChevronDoubleDownIcon } from "@heroicons/react/16/solid";
 import ScrollToTopButton from "../components/ScrollToTopButton.jsx";
 import Footer from "../components/Footer.jsx";
+import PlaneAnimation from "../components/PlaneAnimation.jsx";
 
 const projectData = [
   {
@@ -69,8 +70,10 @@ export default function MainPage() {
           <div>
             <h1>Matyas</h1>
             <hr />
+            <PlaneAnimation />
           </div>
         </section>
+        
         <div className="lead-down">
           <ChevronDoubleDownIcon height={75} width={75} />
           <small>past work</small>
@@ -86,19 +89,19 @@ export default function MainPage() {
                   handleImageClick(project.path);
                 }
               }}>
-                <img
-                  role="button"
-                  onClick={() => handleImageClick(project.path)}
-                  src={project.image}
-                  alt={project.title}
-                  className="sticky-image svg"
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                  style={{
-                    cursor: "pointer",
-                    transform: isHovered ? 'scale(1.02)' : 'scale(1)', transition: 'transform 0.3s ease'
-                  }}
-                />
+              <img
+                role="button"
+                onClick={() => handleImageClick(project.path)}
+                src={project.image}
+                alt={project.title}
+                className="sticky-image svg"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                style={{
+                  cursor: "pointer",
+                  transform: isHovered ? 'scale(1.02)' : 'scale(1)', transition: 'transform 0.3s ease'
+                }}
+              />
             </div>
           ))}
           <div className="image-wrapper" >
