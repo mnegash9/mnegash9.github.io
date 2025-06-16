@@ -257,9 +257,5 @@ h1 {
     height: 200px;
     border: 2px solid black
   }
-  .thebuzz {
-    display: flex;
-    flex-direction: column;
-  }
 
 }

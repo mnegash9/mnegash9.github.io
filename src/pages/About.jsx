@@ -2,7 +2,6 @@ import React from "react";
 import { useParams, Link } from 'react-router-dom';
 import Footer from '../components/Footer'
 import ProfilePic from "../assets/profile2.jpeg"
-import LinkedInButton from "../components/LinkedInButton";
 
 export default function About() {
   return (

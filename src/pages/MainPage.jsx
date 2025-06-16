@@ -3,17 +3,24 @@ import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react
 import TheBuzz from "../assets/thebuzz-project-demo.png";
 import PowerApps from "../assets/powerapps-project-demo.png";
 import PowerBI from "../assets/powerbi-project-demo.png";
+import TerraCore from "../assets/terracore-project-demo.png";
 import { ChevronDoubleDownIcon } from "@heroicons/react/16/solid";
 import ScrollToTopButton from "../components/ScrollToTopButton.jsx";
 import Footer from "../components/Footer.jsx";
 
 const projectData = [
   {
+    id: 'terracore',
+    image: TerraCore,
+    path: '/projects/terracore',
+    title: 'Terracore Project'
+  },
+  {
     id: 'thebuzz',
     image: TheBuzz,
     path: '/projects/thebuzz',
     title: 'The Buzz Project'
-  }
+  },
 ];
 
 export default function MainPage() {
