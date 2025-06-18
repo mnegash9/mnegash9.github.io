@@ -1,7 +1,8 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import SystemCompDiagram from "../assets/buzz-component-diagram.svg";
-import ScreenshotUI from "../assets/buzz-flow-gif.gif"
+import BuzzUI from "../assets/buzz-flow-gif.gif"
+import TerracoreUI from "../assets/terracore-ui.gif";
 import WiringDiagram from "../assets/terracore-wiring-diagram.jpg";
 import PCB from "../assets/terracore-pcb.png";
 import Footer from '../components/Footer';
@@ -63,7 +64,7 @@ const ProjectPage = () => {
                             </div>
                             <div style={{ flex: 3, marginLeft: '12px', marginTop: '120px' }} className='project-images'>
                                 <img src={SystemCompDiagram} className='sticky-image' style={{ maxWidth: '85%' }} />
-                                <img src={ScreenshotUI} className='sticky-image' style={{ maxWidth: '85%', marginTop: '25px' }} />
+                                <img src={BuzzUI} className='sticky-image' style={{ maxWidth: '85%', marginTop: '25px' }} />
                                 <section>
                                     <h2>Give it a try here </h2>
                                     <p>The Buzz is an idea sharing app for private internal discussion (like in a company) and allows posting of ideas, comments, and files/images.</p>
@@ -121,20 +122,11 @@ const ProjectPage = () => {
                             </div>
                             <div style={{ flex: 3, marginLeft: '12px', marginTop: '120px' }} className='project-images'>
                                 <img src={WiringDiagram} className='sticky-image' style={{ maxWidth: '85%' }} />
-                                <img src={[PCB]} className='sticky-image' style={{ maxWidth: '85%', marginTop: '25px' }} />
+                                <img src={PCB} className='sticky-image' style={{ maxWidth: '85%', marginTop: '25px' }} />
+                                <img src={TerracoreUI} className='sticky-image' style={{ maxWidth: '85%', marginTop: '25px' }} />
                                 <section>
-                                    <h2>Give it a try here </h2>
-                                    <p>Sensor data was live at the following address, it is now jsut demo data that was previously measured.</p>
-                                    <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center", alignItems: "center" }}>
-                                        <Link target="_blank" to='https://terracore-website.onrender.com'>
-                                            <div style={{ borderRadius: 20, backgroundColor: "#222831", cursor: "pointer" }}>
-                                                <p style={{ color: "white", fontSize: 30, padding: "20px 30px" }}>
-                                                    <u>TerraCore</u>
-                                                </p>
-                                            </div>
-                                        </Link>
-
-                                    </div>
+                                    <h3>View here: <Link target="_blank" to='https://terracore-website.onrender.com'> TerraCore </Link></h3>
+                                    <p>Sensor data was live at the following address, it is now just demo data that was previously measured.</p>
                                 </section>
                             </div>
                         </div>
