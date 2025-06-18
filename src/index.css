@@ -258,7 +258,6 @@ h1 {
     border: 2px solid black
   }
   .projectlayout {
-    display: flex;
     flex-direction: column;
   }
 

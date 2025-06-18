@@ -31,7 +31,7 @@ const ProjectPage = () => {
                 <section >
                     <Logo />
                     <main >
-                        <div className='projectlayout' style={{ display: 'flex', overflow: "auto" }}>
+                        <div className="projectlayout" style={{ display: 'flex', overflow: "auto" }}>
                             <div style={{ flex: 1, marginLeft: '12px', marginTop: 300 }}>
                                 <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
                                 {project.description}
@@ -93,7 +93,7 @@ const ProjectPage = () => {
                 <section >
                     <Logo />
                     <main >
-                        <div className='projectlayout' style={{ display: 'flex', overflow: "auto" }}>
+                        <div className="projectlayout" style={{ display: 'flex', overflow: "auto" }}>
                             <div style={{ flex: 1, marginLeft: '12px', marginTop: 300 }}>
                                 <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
                                 {project.description}
