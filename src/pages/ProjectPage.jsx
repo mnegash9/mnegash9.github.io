@@ -5,6 +5,7 @@ import BuzzUI from "../assets/buzz-flow-gif.gif"
 import TerracoreUI from "../assets/terracore-ui.gif";
 import WiringDiagram from "../assets/terracore-wiring-diagram.jpg";
 import PCB from "../assets/terracore-pcb.png";
+import TerracoreVideo from "../assets/terracore-video.MP4"
 import Footer from '../components/Footer';
 import Logo from '../components/Logo';
 
@@ -102,7 +103,7 @@ const ProjectPage = () => {
                             <div style={{ flex: 2, marginTop: "120px", marginLeft: "0px", flexDirection: "column" }}>
                                 <div style={{ marginLeft: 30 }}>
                                     <p className="text-gray-700">According to the UN, food production has to increase 50% by 2050 <Link target='_blank' to='https://www.fao.org/global-perspectives-studies/food-agriculture-projections-to-2050/en/'>[1]</Link>. Competition for land, however is projected to increase, especially with factors like human settlement limiting land used for agriculture.</p>
-                                    <p>Therefore, there is an acute need for precision agriculture, and one our project aims to address. Terracore enables precision agriculture and environmental stewardship at scale by deploying low-cost, modular sensor nodes capable of measuring key soil parameters such as:</p>
+                                    <p>One way to address this problem is being more efficient with the land being used for agriculture, otherwise referred to as precision agriculture, and one our project aims to address. Terracore enables precision agriculture and environmental stewardship at scale by deploying low-cost, modular sensor nodes capable of measuring key soil parameters such as:</p>
                                     <ul>
                                         <li>Soil Moisture </li>
                                         <li>Soil Compaction</li>
@@ -117,6 +118,13 @@ const ProjectPage = () => {
                                     <p>Most environmental sensors, including the CO₂ sensor (SCD41), humidity/temperature/pressure (BME280), and UV/Ambient (LTR390), communicate via the I²C protocol, sharing common SDA and SCL lines with pull-up resistors. Additional sensors, such as the soil moisture, compaction, and GPS modules, connect through UART, analog, or serial interfaces to provide comprehensive soil and environmental data.</p>
                                     <p>From the wiring digram, we were able to build a PCB in <b>KiCad</b> to reduce the component size, and make it plug and play with the sensors we chose.</p>
                                     <p>Using KiCad was frustrating initially (since we had to make custom footprints and symbols for each component/sensor) but we prevailed and printed 100mm by 80mm circuit boards.</p>
+                                    <p>We were also able to develop a server and frontend to display those statistics and allow farmers to use the data collected effectively. A short demo is on the right.</p>
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '20px' }}>
+                                    <video loop autoPlay muted width={600} >
+                                        <source src={TerracoreVideo} type='video/mp4'></source>
+                                        Your browser does not support the video tag.
+                                    </video>
                                 </div>
 
                             </div>
