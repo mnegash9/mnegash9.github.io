@@ -35,14 +35,14 @@ export default function About() {
                   src={Resume}
                   width="860px"
                   height="1150px"
-                  style={{ border: 'none', marginLeft: '20px', borderRadius: '10px' }}
+                  style={{ border: 'none', marginLeft: '20px', marginTop: '20px', borderRadius: '10px' }}
                   title="Resume"
                 />
 
               </div>
             </div>
             <div style={{ flex: 1 }}>
-              <div style={{ justifyContent: 'center', alignContent: 'center' }}>
+              <div style={{ justifyContent: 'center', alignContent: 'center', marginLeft: '180px' }}>
                 <img
                   className="avatar"
                   alt="profile"
