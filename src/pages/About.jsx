@@ -24,10 +24,13 @@ export default function About() {
                   <br className="hidden lg:inline-block" />I like to build things.
                 </h1>
                 <p className="">
-                  I'm a recent graduate from Lehigh University with a B.S. in Computer Engineering. I have a passion for building things, whether it's hardware or software.
-                  I recently also passed the NCEES FE Exam and will (very soon) obtain my EIT certification. Here is my resume:
+                  I'm a recent graduate of Lehigh University with a degree in Computer Engineering. I also recently passed the NCEES FE exam and am awaiting EIT certification. I have held two previous internships, one through Lehigh's Iaccoca Program where I was stationed in Germany working at the ie3 Smart Grid Institute at TU Dortmund.
+                  This past summer, I was at Sugar Land Regional Airport where I worked with Microsoft Power Suite to automate and digitize a lot of processes used by the operations agents, and tagged along for daily runway & taxiway inspections, and helped fly drone sweeps after earning my FAA Part 107 Drone certificate (commercial use of drones in the US).
                 </p>
-                
+                <p>
+                  I'm currently looking for a new role to use some of my experience and skills at the intersection of software and hardware to better enable the use of technology and improve the human experience.
+                </p>
+
                 <iframe
                   src={Resume}
                   width="860px"
