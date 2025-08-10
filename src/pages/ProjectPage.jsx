@@ -8,6 +8,7 @@ import PCB from "../assets/terracore-pcb.png";
 import TerracoreVideo from "../assets/terracore-video.MP4"
 import Footer from '../components/Footer';
 import Logo from '../components/Logo';
+import Zoom from 'react-medium-image-zoom'
 
 const ProjectPage = () => {
     const { projectId } = useParams();
@@ -64,8 +65,8 @@ const ProjectPage = () => {
 
                             </div>
                             <div style={{ flex: 3, marginLeft: '12px', marginTop: '120px' }} className='project-images'>
-                                <img src={SystemCompDiagram} className='sticky-image' style={{ maxWidth: '85%' }} />
-                                <img src={BuzzUI} className='sticky-image' style={{ maxWidth: '85%', marginTop: '25px' }} />
+                                <Zoom><img src={SystemCompDiagram} className='sticky-image' style={{ maxWidth: '85%' }} /></Zoom>
+                                <Zoom><img src={BuzzUI} className='sticky-image' style={{ maxWidth: '85%', marginTop: '25px' }} /></Zoom>
                                 <section>
                                     <h2>Give it a try here </h2>
                                     <p>The Buzz is an idea sharing app for private internal discussion (like in a company) and allows posting of ideas, comments, and files/images.</p>
@@ -121,17 +122,21 @@ const ProjectPage = () => {
                                     <p>We were also able to develop a server and frontend to display those statistics and allow farmers to use the data collected effectively. A short demo is on the right.</p>
                                 </div>
                                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '20px' }}>
-                                    <video loop autoPlay muted width={600} >
+                                    <Zoom>
+                                        <video loop autoPlay muted width={600} >
                                         <source src={TerracoreVideo} type='video/mp4'></source>
                                         Your browser does not support the video tag.
-                                    </video>
+                                        </video>
+                                    </Zoom>
                                 </div>
 
                             </div>
                             <div style={{ flex: 3, marginLeft: '12px', marginTop: '120px' }} className='project-images'>
-                                <img src={WiringDiagram} className='sticky-image' style={{ maxWidth: '85%' }} />
-                                <img src={PCB} className='sticky-image' style={{ maxWidth: '85%', marginTop: '25px' }} />
-                                <img src={TerracoreUI} className='sticky-image' style={{ maxWidth: '85%', marginTop: '25px' }} />
+                                <Zoom><img src={WiringDiagram} className='sticky-image' style={{ maxWidth: '85%' }} /></Zoom>
+                                <Zoom><img src={PCB} className='sticky-image' style={{ marginLeft: "60px", maxWidth: '85%', marginTop: '25px' }} /></Zoom>
+                                <Zoom>
+                                    <img src={TerracoreUI} className='sticky-image' style={{ marginLeft: "60px", maxWidth: '85%', marginTop: '25px' }} />
+                                </Zoom>
                                 <section>
                                     <h3>View here: <Link target="_blank" to='https://terracore-website.onrender.com'> TerraCore </Link></h3>
                                     <p>Sensor data was live at the following address, it is now just demo data that was previously measured.</p>

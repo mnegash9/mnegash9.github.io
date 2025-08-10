@@ -7,6 +7,7 @@ import TerraCore from "../assets/terracore-project-demo.png";
 import { ChevronDoubleDownIcon } from "@heroicons/react/16/solid";
 import ScrollToTopButton from "../components/ScrollToTopButton.jsx";
 import Footer from "../components/Footer.jsx";
+import Zoom from 'react-medium-image-zoom'
 
 const projectData = [
   {
@@ -109,10 +110,10 @@ export default function MainPage() {
             </div>
           ))}
           <div className="image-wrapper" >
-            <img src={PowerBI} alt={'Power BI Demo Image'} className="sticky-image" />
+            <Zoom><img src={PowerBI} alt={'Power BI Demo Image'} className="sticky-image" /></Zoom>
           </div>
           <div className="image-wrapper" >
-            <img src={PowerApps} alt={'Power Apps Demo Image'} className="sticky-image" />
+            <Zoom><img src={PowerApps} alt={'Power Apps Demo Image'} className="sticky-image" /></Zoom>
           </div>
         </div>
         <Footer />
